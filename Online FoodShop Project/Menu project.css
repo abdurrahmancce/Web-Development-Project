@@ -1,0 +1,41 @@
+/* General Reset */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.menu-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgb(108, 167, 164);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.menu-container h1 {
+    margin-bottom: 20px;
+    color: #f9f91a;
+}
+
+.menu-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.menu-table th,
+.menu-table td {
+    text-align: left;
+    padding: 22px;
+    border: 1px solid #810246;
+}
+
+.menu-table thead {
+    background-color: #a6ac4f;
+    color: white;
+}

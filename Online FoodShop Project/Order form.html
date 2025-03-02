@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Form - Sheba Online FoodShop</title>
+  <link rel="stylesheet" href="Order form.css">
+</head>
+<body>
+  <div class="order-form-container">
+    <h1>Place Your Order</h1>
+    <form action="/submit-order" method="POST">
+      <!-- Customer Name -->
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+      <!-- Email -->
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <!-- Phone Number -->
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+      <!-- Address -->
+      <label for="address">Delivery Address:</label>
+      <textarea id="address" name="address" placeholder="Enter your delivery address" rows="3" required></textarea>
+
+      <!-- Select Menu Item -->
+      <label for="menu-item">Select Item:</label>
+      <select id="menu-item" name="menu-item" required>
+        <option value="" disabled selected>Choose a menu item</option>
+        <option value="combo-meal">Special Combo Meal</option>
+        <option value="vegetarian">Vegetarian Delight</option>
+        <option value="chef-special">Special Juice	</option>
+      </select>
+
+      <!-- Quantity -->
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" name="quantity" min="1" placeholder="Enter quantity" required>
+
+      <!-- Special Instructions -->
+      <label for="instructions">Special Instructions:</label>
+      <textarea id="instructions" name="instructions" placeholder="Add any special instructions (optional)" rows="3"></textarea>
+
+      <!-- Submit Button -->
+      <button type="submit" class="order-button">Place Order</button>
+    </form>
+  </div>
+</body>
+</html>
