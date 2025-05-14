@@ -1,0 +1,118 @@
+:root {
+    --bg-light: #fefefe;
+    --text-light: #111;
+    --bg-dark: #121212;
+    --text-dark: #fefefe;
+    --accent: #007acc;
+    --transition: 0.3s ease;
+  }
+  
+  [data-theme="light"] {
+    --bg: var(--bg-light);
+    --text: var(--text-light);
+  }
+  
+  [data-theme="dark"] {
+    --bg: var(--bg-dark);
+    --text: var(--text-dark);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background var(--transition), color var(--transition);
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  
+  .navbar {
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+  
+  .nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: var(--text);
+  }
+  
+  .theme-toggle {
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+  
+  .section {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .skills li, .project-card {
+    padding: 10px 15px;
+    background: var(--accent);
+    color: white;
+    border-radius: 6px;
+  }
+  
+  .project-grid {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 20px;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  form input, form textarea {
+    padding: 10px;
+    width: 80%;
+    max-width: 500px;
+  }
+  
+  #scrollTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background: var(--accent);
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+  }
+  
