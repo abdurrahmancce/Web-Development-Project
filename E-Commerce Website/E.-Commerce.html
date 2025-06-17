@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible E-Commerce | TechShop</title>
+    <link rel="stylesheet" href="E-Commerce.css">
+    <script src="E-Commerce.js" defer></script>
+</head>
+<body>
+    <!-- Skip to Content Link -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header role="banner">
+        <div class="header-container">
+            <h1>TechShop</h1>
+            
+            <nav role="navigation" aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><button id="cart-toggle" aria-expanded="false">Cart (<span id="cart-count">0</span>)</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" role="main">
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="hero-content">
+                <h2 id="hero-heading">Welcome to TechShop</h2>
+                <p>Your destination for the latest tech gadgets</p>
+            </div>
+        </section>
+
+        <section class="products" id="products" aria-labelledby="products-heading">
+            <h2 id="products-heading">Featured Products</h2>
+            <div class="product-grid">
+                <!-- Product cards will be dynamically inserted here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <aside id="cart-sidebar" role="complementary" aria-labelledby="cart-heading">
+        <div class="cart-header">
+            <h2 id="cart-heading">Your Cart</h2>
+            <button id="cart-close">&times;</button>
+        </div>
+        <div class="cart-items" role="region" aria-live="polite">
+            <!-- Cart items will be dynamically inserted here -->
+        </div>
+        <div class="cart-total">
+            <p>Total: $<span id="cart-total">0.00</span></p>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </aside>
+
+    <footer role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Returns & Exchanges</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#" aria-label="Facebook">Facebook</a></li>
+                    <li><a href="#" aria-label="Twitter">Twitter</a></li>
+                    <li><a href="#" aria-label="Instagram">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2023 TechShop. All rights reserved.</p>
+    </footer>
+</body>
+</html>
